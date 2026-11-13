@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Henrique Melo · Desenvolvedor</title>
+    <meta
+      name="description"
+      content="Portfólio de Henrique Melo, desenvolvedor front-end júnior e estudante de Engenharia da Computação na Univesp."
+    />
+    <meta name="theme-color" content="#1E5FBF" />
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      // aplica o tema salvo (ou o do sistema) antes da página aparecer
+      (function () {
+        var root = document.documentElement;
+        root.classList.add("js");
+        var tema = null;
+        try { tema = localStorage.getItem("tema"); } catch (e) {}
+        if (tema !== "light" && tema !== "dark") {
+          tema = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        root.setAttribute("data-theme", tema);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- NAVEGAÇÃO -->
+    <header class="nav" id="topo">
+      <div class="container nav__inner">
+        <a class="nav__logo" href="#topo" aria-label="Henrique Melo, voltar ao início">
+          <span class="nav__mark" aria-hidden="true">HM</span>
+          <span class="nav__name">Henrique Melo</span>
+        </a>
+
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="Abrir menu"
+        >
+          <span></span><span></span>
+        </button>
+
+        <nav class="nav__menu" id="menu" aria-label="Seções">
+          <a href="#sobre">Sobre</a>
+          <a href="#stack">Stack</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#formacao">Formação</a>
+          <a href="#contato">Contato</a>
+          <a
+            class="btn btn--primary btn--sm"
+            href="https://drive.google.com/file/d/14bsN7AU21dLq_DCfoGqHVO_6fhbwArZ0/view?usp=sharing"
+            target="_blank"
+            rel="noopener"
+            >Currículo</a
+          >
+        </nav>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Ativar tema escuro"
+          title="Ativar tema escuro"
+        >
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__text">
+            <p class="eyebrow reveal">
+              <span class="dot" aria-hidden="true"></span>
+              Desenvolvedor Front-end/Back-end Júnior · São Paulo
+            </p>
+            <h1 class="hero__title reveal">
+              Olá, sou o Henrique.<br />
+              Eu construo <span class="hl">páginas web</span> que funcionam bem.
+            </h1>
+            <p class="hero__lead reveal">
+              Estudo Engenharia da Computação na Univesp e programo com
+              JavaScript, React e Python. Cada curso que faço vira um
+              projeto publicado.
+            </p>
+            <div class="hero__actions reveal">
+              <a class="btn btn--primary" href="#projetos">Ver projetos</a>
+              <a
+                class="btn btn--ghost"
+                href="https://github.com/HenriqueMGA"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+                GitHub
+              </a>
+              <a
+                class="btn btn--ghost"
+                href="https://www.linkedin.com/in/henrique-melo-gaertner-amaral-945560267"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+                LinkedIn
+              </a>
+              <a
+                class="btn btn--ghost"
+                href="https://drive.google.com/file/d/14bsN7AU21dLq_DCfoGqHVO_6fhbwArZ0/view?usp=sharing"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm-1 1.5L18.5 9H13V3.5ZM8 13h8v1.5H8V13Zm0 3.5h8V18H8v-1.5ZM8 9.5h3V11H8V9.5Z"/></svg>
+                Currículo
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__visual reveal">
+            <div class="hero__photo">
+              <img
+                src="assets/img/henrique.jpg"
+                alt="Foto de Henrique Melo"
+                width="900"
+                height="900"
+              />
+            </div>
+            <figure class="code-card" aria-label="Resumo em formato de código">
+              <div class="code-card__bar" aria-hidden="true">
+                <i></i><i></i><i></i>
+                <span>henrique.ts</span>
+              </div>
+<pre><code><span class="k">const</span> <span class="v">henrique</span> = {
+  cargo: <span class="s">"Dev Front-end/Back-end Jr."</span>,
+  local: <span class="s">"São Paulo, SP"</span>,
+  stack: [<span class="s">"React"</span>, <span class="s">"Python"</span>],
+  aprendendo: <span class="k">true</span>,
+};</code></pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE -->
+      <section class="section section--tint" id="sobre">
+        <div class="container about">
+          <div class="section__head reveal">
+            <p class="section__index">01 — Sobre</p>
+            <h2 class="section__title">Quem escreve o código</h2>
+          </div>
+
+          <div class="about__body">
+            <div class="about__text reveal">
+              <p>
+                Sou desenvolvedor júnior e estudante de Engenharia da Computação
+                na Univesp. Comecei a programar pelo Oracle Next Education (ONE),
+                da Alura, e desde então construo páginas web com HTML, CSS,
+                JavaScript e React.
+              </p>
+              <p>
+                Aprendo bastante por conta própria: faço cursos na Alura e na DIO
+                e transformo o que estudo em projetos no GitHub, publicados na
+                Vercel.
+              </p>
+              <p>
+                Sou organizado, empático com quem trabalha comigo e vou atrás dos
+                objetivos até cumpri-los. Quero crescer como profissional e
+                contribuir de verdade com o time onde eu estiver.
+              </p>
+            </div>
+
+            <dl class="facts reveal">
+              <div class="facts__item">
+                <dt>Localização</dt>
+                <dd>São Paulo, SP</dd>
+              </div>
+              <div class="facts__item">
+                <dt>Graduação</dt>
+                <dd>Eng. da Computação · Univesp</dd>
+              </div>
+              <div class="facts__item">
+                <dt>Foco</dt>
+                <dd>Desenvolvimento Front-end</dd>
+              </div>
+              <div class="facts__item">
+                <dt>Idiomas</dt>
+                <dd>Espanhol · Inglês</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK -->
+      <section class="section" id="stack">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="section__index">02 — Stack</p>
+            <h2 class="section__title">Ferramentas que eu uso</h2>
+          </div>
+
+          <div class="stack">
+            <div class="stack__group reveal">
+              <h3 class="stack__label">Front-end</h3>
+              <ul class="stack__list">
+                <li class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" width="28" height="28" loading="lazy" />HTML5</li>
+                <li class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" width="28" height="28" loading="lazy" />CSS3</li>
+                <li class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" width="28" height="28" loading="lazy" />JavaScript</li>
+                <li class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="" width="28" height="28" loading="lazy" />React</li>
+              </ul>
+            </div>
+
+            <div class="stack__group reveal">
+              <h3 class="stack__label">Back-end e dados</h3>
+              <ul class="stack__list">
+                <li class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" width="28" height="28" loading="lazy" />Python</li>
+                <li class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" width="28" height="28" loading="lazy" />MySQL</li>
+              </ul>
+            </div>
+
+            <div class="stack__group reveal">
+              <h3 class="stack__label">Ferramentas</h3>
+              <ul class="stack__list">
+                <li class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" width="28" height="28" loading="lazy" />Git</li>
+                <li class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/github/github-original.svg" alt="" width="28" height="28" loading="lazy" />GitHub</li>
+                <li class="tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vercel/vercel-original.svg" alt="" width="28" height="28" loading="lazy" />Vercel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section class="section section--tint" id="projetos">
+        <div class="container">
+          <div class="section__head section__head--row reveal">
+            <div>
+              <p class="section__index">03 — Projetos</p>
+              <h2 class="section__title">O que eu já coloquei no ar</h2>
+            </div>
+            <a
+              class="link-arrow"
+              href="https://github.com/HenriqueMGA?tab=repositories"
+              target="_blank"
+              rel="noopener"
+              >Todos os repositórios <span aria-hidden="true">→</span></a
+            >
+          </div>
+
+          <div class="projects">
+            <article class="project reveal">
+              <a
+                class="project__media"
+                href="https://fokus-zeta-eight.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img src="assets/img/projetos/Projeto_Fokus.png" alt="" width="1831" height="880" loading="lazy" />
+              </a>
+              <div class="project__body">
+                <p class="project__meta">Oracle ONE · Alura</p>
+                <h3 class="project__title">Fokus</h3>
+                <p class="project__desc">
+                  Timer Pomodoro com modos de foco, descanso curto e descanso
+                  longo, além de música ambiente para acompanhar a sessão.
+                </p>
+                <div class="project__links">
+                  <a class="btn btn--primary btn--sm" href="https://fokus-zeta-eight.vercel.app/" target="_blank" rel="noopener">Ver demo</a>
+                  <a class="btn btn--ghost btn--sm" href="https://github.com/HenriqueMGA/Fokus" target="_blank" rel="noopener">Repositório</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <a
+                class="project__media"
+                href="https://jogo-do-numero-secreto-hazel-xi.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img src="assets/img/projetos/Numero_Secreto.png" alt="" width="1850" height="877" loading="lazy" />
+              </a>
+              <div class="project__body">
+                <p class="project__meta">Oracle ONE · Alura</p>
+                <h3 class="project__title">Jogo do Número Secreto</h3>
+                <p class="project__desc">
+                  Jogo de adivinhação em JavaScript: o usuário chuta um número
+                  entre 1 e 10 e recebe dicas até acertar.
+                </p>
+                <div class="project__links">
+                  <a class="btn btn--primary btn--sm" href="https://jogo-do-numero-secreto-hazel-xi.vercel.app/" target="_blank" rel="noopener">Ver demo</a>
+                  <a class="btn btn--ghost btn--sm" href="https://github.com/HenriqueMGA/Jogo-do-numero-secreto" target="_blank" rel="noopener">Repositório</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <a
+                class="project__media"
+                href="https://optimus-tech-lac.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img src="assets/img/projetos/Optimus_Tech.png" alt="" width="1831" height="880" loading="lazy" />
+              </a>
+              <div class="project__body">
+                <p class="project__meta">7 Days of Code · Alura</p>
+                <h3 class="project__title">Optimus Tech</h3>
+                <p class="project__desc">
+                  Landing page institucional de uma empresa de tecnologia, com
+                  navegação, seção sobre e indicadores de resultado.
+                </p>
+                <div class="project__links">
+                  <a class="btn btn--primary btn--sm" href="https://optimus-tech-lac.vercel.app/" target="_blank" rel="noopener">Ver demo</a>
+                  <a class="btn btn--ghost btn--sm" href="https://github.com/HenriqueMGA/Optimus-Tech" target="_blank" rel="noopener">Repositório</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMAÇÃO -->
+      <section class="section" id="formacao">
+        <div class="container">
+          <div class="section__head section__head--row reveal">
+            <div>
+              <p class="section__index">04 — Formação</p>
+              <h2 class="section__title">Onde eu aprendi</h2>
+            </div>
+            <a
+              class="link-arrow"
+              href="https://docs.google.com/document/d/1AHTjKQEREx4m7F01hFsUfjHxx2yQEw5nkfTBxhRKrrw/edit?usp=sharing"
+              target="_blank"
+              rel="noopener"
+              >Ver certificados <span aria-hidden="true">→</span></a
+            >
+          </div>
+
+          <ol class="timeline">
+            <li class="timeline__item reveal">
+              <img class="timeline__logo" src="assets/img/formacao/univesp.jpeg" alt="Logo Univesp" width="56" height="56" loading="lazy" />
+              <div class="timeline__info">
+                <h3>Engenharia da Computação</h3>
+                <p>Univesp · Universidade Virtual do Estado de São Paulo</p>
+              </div>
+              <div class="timeline__date">
+                <span class="badge">Em andamento</span>
+                2024 – 2029
+              </div>
+            </li>
+
+            <li class="timeline__item reveal">
+              <img class="timeline__logo" src="assets/img/formacao/alura.png" alt="Logo Alura" width="56" height="56" loading="lazy" />
+              <div class="timeline__info">
+                <h3>Oracle Next Education (ONE)</h3>
+                <p>Alura em parceria com a Oracle · Programação front-end</p>
+              </div>
+              <div class="timeline__date">2024</div>
+            </li>
+
+            <li class="timeline__item reveal">
+              <img class="timeline__logo" src="assets/img/formacao/logo_dio.png" alt="Logo DIO" width="56" height="56" loading="lazy" />
+              <div class="timeline__info">
+                <h3>Cursos de programação</h3>
+                <p>DIO · Digital Innovation One</p>
+              </div>
+              <div class="timeline__date">Cursos livres</div>
+            </li>
+
+            <li class="timeline__item reveal">
+              <img class="timeline__logo" src="assets/img/formacao/proa.png" alt="Logo Instituto Proa" width="56" height="56" loading="lazy" />
+              <div class="timeline__info">
+                <h3>Plataforma PROA</h3>
+                <p>Instituto Proa · Preparação profissional</p>
+              </div>
+              <div class="timeline__date">2023</div>
+            </li>
+
+            <li class="timeline__item reveal">
+              <img class="timeline__logo" src="assets/img/formacao/cel.jpeg" alt="Logo CEL" width="56" height="56" loading="lazy" />
+              <div class="timeline__info">
+                <h3>Espanhol</h3>
+                <p>Centro de Estudo de Línguas (CEL)</p>
+              </div>
+              <div class="timeline__date">2021 – 2023</div>
+            </li>
+
+            <li class="timeline__item reveal">
+              <img class="timeline__logo" src="assets/img/formacao/nsp.jpeg" alt="Logo E.E. Nossa Senhora da Penha" width="56" height="56" loading="lazy" />
+              <div class="timeline__info">
+                <h3>Ensino médio</h3>
+                <p>E.E. Nossa Senhora da Penha</p>
+              </div>
+              <div class="timeline__date">2021 – 2023</div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section class="contact" id="contato">
+        <div class="container contact__grid">
+          <div class="contact__text reveal">
+            <p class="section__index section__index--light">05 — Contato</p>
+            <h2 class="contact__title">Vamos conversar?</h2>
+            <p class="contact__lead">
+              Tem uma vaga, um projeto ou uma dúvida? Mande uma mensagem pelo
+              formulário e eu respondo o mais rápido possível.
+            </p>
+            <ul class="contact__links">
+              <li>
+                <span>E-mail</span>
+                <a href="mailto:riquemamaral@gmail.com">riquemamaral@gmail.com</a>
+              </li>
+              <li>
+                <span>LinkedIn</span>
+                <a href="https://www.linkedin.com/in/henrique-melo-gaertner-amaral-945560267" target="_blank" rel="noopener">Henrique Melo</a>
+              </li>
+              <li>
+                <span>GitHub</span>
+                <a href="https://github.com/HenriqueMGA" target="_blank" rel="noopener">@HenriqueMGA</a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form reveal" id="form-contato" novalidate>
+            <div class="form__row">
+              <label class="field">
+                <span>Nome</span>
+                <input name="nome" type="text" autocomplete="name" required minlength="3" />
+              </label>
+              <label class="field">
+                <span>E-mail</span>
+                <input name="email" type="email" autocomplete="email" required spellcheck="false" />
+              </label>
+            </div>
+            <label class="field">
+              <span>Assunto</span>
+              <input name="assunto" type="text" required />
+            </label>
+            <label class="field">
+              <span>Mensagem</span>
+              <textarea name="mensagem" rows="5" required></textarea>
+            </label>
+            <p class="form__error" role="alert" hidden>Preencha todos os campos com dados válidos.</p>
+            <button class="btn btn--primary btn--block" type="submit">
+              Enviar pelo WhatsApp
+            </button>
+            <p class="form__hint">A mensagem abre pronta no WhatsApp para você só confirmar o envio.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>Desenvolvido por Henrique Melo · <span id="ano">2026</span></p>
+        <a href="#topo" class="link-arrow">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
