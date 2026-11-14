@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
   <head>
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-T36JPMRK"></script>
     <script>
@@ -15,7 +15,7 @@
       name="description"
       content="Portfólio de Henrique Melo, desenvolvedor front-end júnior e estudante de Engenharia da Computação. Projetos em React e Python."
     />
-    <meta name="theme-color" content="#1E5FBF" />
+    <meta name="theme-color" content="#0b0816" />
     <link rel="canonical" href="https://portifolio-dev-blush.vercel.app/" />
 
     <!-- prévia ao compartilhar o link (LinkedIn, WhatsApp etc.) -->
@@ -54,7 +54,9 @@
         ]
       }
     </script>
-    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="64x64" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,14 +66,14 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <script>
-      // aplica o tema salvo (ou o do sistema) antes da página aparecer
+      // aplica o tema salvo (escuro por padrão) antes da página aparecer
       (function () {
         var root = document.documentElement;
         root.classList.add("js");
         var tema = null;
         try { tema = localStorage.getItem("tema"); } catch (e) {}
         if (tema !== "light" && tema !== "dark") {
-          tema = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          tema = "dark";
         }
         root.setAttribute("data-theme", tema);
       })();
@@ -117,9 +119,9 @@
         <button
           class="theme-toggle"
           type="button"
-          aria-pressed="false"
-          aria-label="Ativar tema escuro"
-          title="Ativar tema escuro"
+          aria-pressed="true"
+          aria-label="Ativar tema claro"
+          title="Ativar tema claro"
         >
           <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
           <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
@@ -337,24 +339,25 @@
             <article class="project reveal">
               <a
                 class="project__media"
-                href="https://jogo-do-numero-secreto-hazel-xi.vercel.app/"
+                href="https://minha-agenda-frontend-wheat.vercel.app/"
                 target="_blank"
                 rel="noopener"
                 tabindex="-1"
                 aria-hidden="true"
               >
-                <img src="assets/img/projetos/Numero_Secreto.png" alt="Tela do Jogo do Número Secreto, jogo de adivinhação em JavaScript" width="1850" height="877" loading="lazy" />
+                <img src="assets/img/projetos/Minha_Agenda.png" alt="Tela do MinhaAgenda, painel de agendamento de consultas com pacientes, médicos e status" width="1917" height="904" loading="lazy" />
               </a>
               <div class="project__body">
-                <p class="project__meta">Oracle ONE · Alura</p>
-                <h3 class="project__title">Jogo do Número Secreto</h3>
+                <p class="project__meta">JavaScript · Bootstrap · API FastAPI</p>
+                <h3 class="project__title">MinhaAgenda</h3>
                 <p class="project__desc">
-                  Jogo de adivinhação em JavaScript: o usuário chuta um número
-                  entre 1 e 10 e recebe dicas até acertar.
+                  Sistema de agendamento para clínicas: cadastro de pacientes e
+                  médicos, controle de status das consultas e lembretes via
+                  WhatsApp, consumindo uma API com autenticação JWT.
                 </p>
                 <div class="project__links">
-                  <a class="btn btn--primary btn--sm" href="https://jogo-do-numero-secreto-hazel-xi.vercel.app/" target="_blank" rel="noopener">Ver demo</a>
-                  <a class="btn btn--ghost btn--sm" href="https://github.com/HenriqueMGA/Jogo-do-numero-secreto" target="_blank" rel="noopener">Repositório</a>
+                  <a class="btn btn--primary btn--sm" href="https://minha-agenda-frontend-wheat.vercel.app/" target="_blank" rel="noopener">Ver demo</a>
+                  <a class="btn btn--ghost btn--sm" href="https://github.com/HenriqueMGA/minha-agenda-frontend" target="_blank" rel="noopener">Repositório</a>
                 </div>
               </div>
             </article>
